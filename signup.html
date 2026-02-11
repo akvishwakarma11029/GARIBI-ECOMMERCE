@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | GARIBI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="brand-logo">GARIBI</a>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode">
+                    <i data-lucide="moon"></i>
+                </button>
+                <a href="search.html" class="icon-btn"><i data-lucide="search"></i></a>
+                <a href="cart.html" class="icon-btn"><i data-lucide="shopping-bag"></i></a>
+                <a href="login.html" class="icon-btn"><i data-lucide="user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="auth-container">
+        <div class="auth-box fade-in-up">
+            <h2>Create Account</h2>
+            <p class="auth-subtitle">Join us for exclusive access</p>
+
+            <form id="signupForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="user"></i>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="mail"></i>
+                        <input type="email" placeholder="john@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="lock"></i>
+                        <input type="password" placeholder="Create a password" required id="signupPass">
+                        <button type="button" class="password-toggle" onclick="togglePassword('signupPass', this)">
+                            <i data-lucide="eye"></i>
+                        </button>
+                    </div>
+                    <ul
+                        style="font-size: 0.75rem; color: #666; margin-top: 5px; padding-left: 20px; list-style-type: disk;">
+                        <li>At least 8 characters</li>
+                        <li>One uppercase letter</li>
+                        <li>One number & one special char</li>
+                    </ul>
+                </div>
+
+                <div class="form-group">
+                    <label>Role (Authorization Demo)</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="shield"></i>
+                        <select required
+                            style="width: 100%; border: none; outline: none; background: transparent; padding: 0;">
+                            <option value="user">User</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="auth-btn">Create Account</button>
+            </form>
+
+            <div class="auth-switch">
+                Already have an account? <a href="login.html">Log In</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

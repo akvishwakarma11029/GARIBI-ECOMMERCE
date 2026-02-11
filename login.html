@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | GARIBI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="brand-logo">GARIBI</a>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode">
+                    <i data-lucide="moon"></i>
+                </button>
+                <a href="search.html" class="icon-btn"><i data-lucide="search"></i></a>
+                <a href="cart.html" class="icon-btn"><i data-lucide="shopping-bag"></i></a>
+                <a href="login.html" class="icon-btn active"><i data-lucide="user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="auth-container">
+        <div class="auth-box fade-in-up">
+            <h2>Welcome Back</h2>
+            <p class="auth-subtitle">Login to access your dashboard</p>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="mail"></i>
+                        <input type="email" placeholder="john@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="lock"></i>
+                        <input type="password" placeholder="••••••••" required id="loginPass">
+                        <button type="button" class="password-toggle" onclick="togglePassword('loginPass', this)">
+                            <i data-lucide="eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-pass">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="auth-btn">Log In</button>
+            </form>
+
+            <form id="verifyForm" style="display: none;">
+                <div class="form-group">
+                    <label>Verification Code</label>
+                    <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">
+                        We've sent a code to your email (simulated).
+                    </p>
+                    <div class="input-wrapper">
+                        <i data-lucide="shield-check"></i>
+                        <input type="text" placeholder="Enter 6-digit code" required maxlength="6"
+                            style="letter-spacing: 2px;">
+                    </div>
+                </div>
+                <button type="submit" class="auth-btn">Verify Code</button>
+            </form>
+
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: #666;">
+                Don't have an account? <a href="signup.html" style="color: #ff4d4d; font-weight: 600;">Sign Up</a>
+            </p>
+            <div
+                style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: var(--border-width) var(--border-style) var(--border);">
+                <a href="admin-login.html"
+                    style="font-size: 0.75rem; color: #aaa; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.3rem;">
+                    <i data-lucide="shield-check" style="width: 14px; height: 14px;"></i> Admin Portal
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

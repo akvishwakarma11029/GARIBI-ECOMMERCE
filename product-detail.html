@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | GARIBI</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <!-- <button id="mobile-menu-btn" class="icon-btn">
+                    <i data-lucide="menu"></i>
+                </button> -->
+                <a href="index.html" class="brand-logo">GARIBI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="men.html">Men</a></li>
+                <li><a href="shoes.html">Shoes</a></li>
+                <li><a href="accessories.html">Accessories</a> -->
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-right">
+                <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode">
+                    <i data-lucide="moon"></i>
+                </button>
+                <a href="search.html" class="icon-btn"><i data-lucide="search"></i></a>
+                <a href="cart.html" class="icon-btn"><i data-lucide="shopping-bag"></i></a>
+                <a href="login.html" class="icon-btn"><i data-lucide="user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-layout">
+        <!-- Sidebar (Hidden by default on desktop per user request) -->
+        <!-- <aside class="sidebar" id="sidebar">
+            ...
+        </aside> -->
+
+        <main class="content-area">
+            <div class="product-detail-container">
+                <!-- Breadcrumbs -->
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a> / <span id="breadcrumb-current">Product</span>
+                </div>
+
+                <div class="product-wrapper">
+                    <!-- Product Image -->
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img id="detail-image" src="" alt="Product Image">
+                            <span id="detail-badge" class="badge-overlay"></span>
+                        </div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="product-info-col">
+                        <div class="product-header-info">
+                            <span id="detail-brand" class="detail-brand">BRAND</span>
+                            <h1 id="detail-title">Product Title</h1>
+                            <div class="detail-price-box">
+                                <span id="detail-price">₹0</span>
+                            </div>
+                        </div>
+
+                        <!-- Size Selector -->
+                        <div class="size-section">
+                            <h4>Select Size</h4>
+                            <div class="detail-size-selector">
+                                <button type="button">XS</button>
+                                <button type="button">S</button>
+                                <button type="button">M</button>
+                                <button type="button">L</button>
+                                <button type="button">XL</button>
+                                <button type="button">XXL</button>
+                            </div>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="action-buttons">
+                            <div class="secondary-actions">
+                                <button class="like-btn"><i data-lucide="heart"></i> Wishlist</button>
+                                <button class="share-btn"><i data-lucide="share-2"></i> Share</button>
+                            </div>
+                            <button class="add-to-cart-btn">
+                                <i data-lucide="shopping-bag"></i> Add to Cart
+                            </button>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="product-description">
+                            <h3>Description</h3>
+                            <p>Experience premium quality with this essential piece. Crafted for comfort and style, this
+                                item features high-grade materials and a modern fit perfect for any occasion.</p>
+                            <ul>
+                                <li>Premium fabric blend</li>
+                                <li>Modern fit</li>
+                                <li>Machine washable</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>GARIBI</h4>
+                <p>Quality fashion designed for the modern lifestyle.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GARIBI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Init icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

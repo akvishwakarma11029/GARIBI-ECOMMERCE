@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | GARIBI</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .search-page-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .search-input-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            border-bottom: 2px solid var(--text-main);
+            padding: 1rem 0;
+        }
+
+        .search-input-section input {
+            flex: 1;
+            border: none;
+            background: none;
+            font-size: 2rem;
+            font-family: var(--font-heading);
+            font-weight: 500;
+            outline: none;
+            color: var(--text-main);
+        }
+
+        .search-input-section i {
+            width: 32px;
+            height: 32px;
+            color: var(--text-main);
+        }
+
+        .results-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 5rem 0;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="brand-logo">GARIBI</a>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode">
+                    <i data-lucide="moon"></i>
+                </button>
+                <a href="search.html" class="icon-btn active"><i data-lucide="search"></i></a>
+                <a href="cart.html" class="icon-btn"><i data-lucide="shopping-bag"></i></a>
+                <a href="login.html" class="icon-btn" id="userLink"><i data-lucide="user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-layout" style="display: block;">
+        <div class="search-page-container">
+            <div class="search-input-section">
+                <i data-lucide="search"></i>
+                <input type="text" id="mainSearchInput" placeholder="Search for products..." autofocus>
+            </div>
+
+            <div id="searchResultsSection" style="display: none;">
+                <div class="results-header">
+                    <h2 id="resultsCount">Results found</h2>
+                </div>
+                <div class="results-grid" id="search-results-container">
+                    <!-- Results populated by JS -->
+                </div>
+            </div>
+
+            <div id="popularSearches" class="no-results">
+                <h3>Start typing to find what you're looking for...</h3>
+                <p style="margin-top: 1rem;">Try: "Shoes", "Tees", "Jackets"</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+
+        const searchInput = document.getElementById('mainSearchInput');
+        const resultsSection = document.getElementById('searchResultsSection');
+        const popularSearches = document.getElementById('popularSearches');
+        const container = document.getElementById('search-results-container');
+        const countTxt = document.getElementById('resultsCount');
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+
+            if (query.length < 2) {
+                resultsSection.style.display = 'none';
+                popularSearches.style.display = 'block';
+                return;
+            }
+
+            popularSearches.style.display = 'none';
+            resultsSection.style.display = 'block';
+
+            // Filter all products
+            let allProducts = [];
+            for (const cat in products) {
+                allProducts = allProducts.concat(products[cat]);
+            }
+
+            const filtered = allProducts.filter(p =>
+                p.title.toLowerCase().includes(query) ||
+                p.brand.toLowerCase().includes(query)
+            );
+
+            // Limited to unique results by title
+            const unique = [];
+            const map = new Map();
+            for (const item of filtered) {
+                if (!map.has(item.title)) {
+                    map.set(item.title, true);
+                    unique.push(item);
+                }
+            }
+
+            container.innerHTML = '';
+            countTxt.innerText = `${unique.length} Results found for "${query}"`;
+
+            if (unique.length > 0) {
+                unique.forEach(item => {
+                    container.innerHTML += createProductCard(item);
+                });
+                lucide.createIcons();
+            } else {
+                container.innerHTML = '<div class="no-results" style="grid-column: 1/-1;">No products matched your search.</div>';
+            }
+        });
+    </script>
+</body>
+
+</html>

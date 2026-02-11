@@ -1,0 +1,36 @@
+{
+    "name": "garibi-ecommerce",
+    "version": "1.0.0",
+    "description": "GARIBI E-commerce Platform with Novu Email Notifications",
+    "main": "notification-server.js",
+    "scripts": {
+        "start": "node notification-server.js",
+        "dev": "nodemon notification-server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "ecommerce",
+        "novu",
+        "notifications",
+        "email",
+        "security"
+    ],
+    "author": "Anil Kumar",
+    "license": "MIT",
+    "dependencies": {
+        "@novu/node": "^0.24.0",
+        "bcrypt": "^6.0.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.6.1",
+        "express": "^4.22.1",
+        "mongoose": "^9.1.6",
+        "nodemailer": "^8.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=9.0.0"
+    }
+}

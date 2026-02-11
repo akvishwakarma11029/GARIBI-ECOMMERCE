@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | GARIBI</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .page-header {
+            background: #f4f6f8;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .text-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .owner-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .owner-avatar {
+            width: 100px;
+            height: 100px;
+            background: #1a1a1a;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="brand-logo">GARIBI</a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode">
+                    <i data-lucide="moon"></i>
+                </button>
+                <a href="search.html" class="icon-btn"><i data-lucide="search"></i></a>
+                <a href="cart.html" class="icon-btn"><i data-lucide="shopping-bag"></i></a>
+                <a href="login.html" class="icon-btn"><i data-lucide="user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-layout" style="display: block;">
+        <header class="page-header">
+            <h1>About GARIBI</h1>
+            <p>Style that speaks every language.</p>
+        </header>
+
+        <section class="text-container">
+            <p>Welcome to <strong>GARIBI</strong>. We believe that fashion should be accessible, expressive, and
+                undeniably stylish. Our mission is to curate the finest collection of apparel and accessories that
+                bridge the gap between premium aesthetics and everyday life.</p>
+            <p>Founded in 2025, GARIBI has quickly grown from a small passion project into a destination for
+                trendsetters across India. We meticulously select every item in our store to ensuring it meets our high
+                standards of quality and design.</p>
+
+            <div class="owner-card">
+                <div class="owner-avatar">AK</div>
+                <div>
+                    <h3>Anil Kumar</h3>
+                    <p style="color: #888; font-weight: 500;">Founder & CEO</p>
+                    <p style="color: #666; font-size: 0.9rem; margin-top:0.2rem;">Ahmedabad, India</p>
+                    <p style="color: #666; font-size: 0.9rem;">+91 79849 74394</p>
+                    <p style="margin-top: 1rem; font-style: italic;">"At GARIBI, we don't just sell clothes; we curate
+                        confidence. Thank you for being part of our journey."</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>GARIBI</h4>
+                <p>Quality fashion designed for the modern lifestyle.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GARIBI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

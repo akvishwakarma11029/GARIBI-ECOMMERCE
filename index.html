@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUX FASHION | Premium E-Commerce</title>
+    <meta name="description"
+        content="Discover the latest in premium fashion at LUX FASHION. Shop men, women, shoes, and accessories.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <!-- <button id="mobile-menu-btn" class="icon-btn">
+                    <i data-lucide="menu"></i>
+                </button> -->
+                <a href="index.html" class="brand-logo">GARIBI</a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <!-- <li><a href="#men">Men</a></li>
+                <li><a href="#shoes">Shoes</a></li>
+                <li><a href="#accessories">Accessories</a> -->
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode">
+                    <i data-lucide="moon"></i>
+                </button>
+                <a href="search.html" class="icon-btn"><i data-lucide="search"></i></a>
+                <a href="cart.html" class="icon-btn"><i data-lucide="shopping-bag"></i></a>
+                <a href="login.html" class="icon-btn"><i data-lucide="user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-layout">
+        <!-- Sidebar (Disabled) -->
+        <!--
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>Categories</h3>
+                    <ul class="sidebar-menu">
+
+                        <li><a href="#">Best Sellers</a></li>
+
+                        <li class="has-submenu">
+                            <button class="menu-toggle">Men's Collection <i data-lucide="chevron-down"></i></button>
+                            <ul class="submenu">
+                                <li><a href="#tees">Tees & Polos</a></li>
+                                <li><a href="#">Shirts</a></li>
+                                <li><a href="#sweatshirts">Sweatshirts & Hoodies</a></li>
+                                <li><a href="#jeans">Jeans</a></li>
+                                <li><a href="#">Pants</a></li>
+                                <li><a href="#jackets">Jackets</a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <li><a href="#shoes">Footwear</a></li>
+                        <li><a href="#accessories">Accessories</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Filter By</h3>
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="checkbox-wrapper">
+                            <label><input type="checkbox"> $0 - $50</label>
+                            <label><input type="checkbox"> $50 - $100</label>
+                            <label><input type="checkbox"> $100 - $200</label>
+                            <label><input type="checkbox"> $200+</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Size</h4>
+                        <div class="size-selector">
+                            <button>XS</button>
+                            <button>S</button>
+                            <button class="active">M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        -->
+
+        <!-- Main Content -->
+        <main class="content-area">
+            <!-- Hero Banner -->
+            <section class="hero">
+                <div class="hero-image-container">
+                    <img src="assets/hero.png" alt="Latest Collection" class="hero-img">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-content">
+                    <h5 class="fade-in-up">NEW SEASON</h5>
+
+                    <a href="#" class="cta-btn fade-in-up delay-3">Shop Now</a>
+                </div>
+            </section>
+
+            <!-- Categories Section (Disabled) -->
+            <!--
+            <section class="categories">
+                <div class="section-header">
+                    <h2>Shop by Category</h2>
+                    <p>Curated collections for every occasion</p>
+                </div>
+
+                <div class="category-grid">
+                    <a href="men.html" class="category-card" id="men">
+                        <div class="img-wrapper">
+                            <img src="assets/men.png" alt="Men's Fashion">
+                            <div class="cat-overlay">
+                                <h3>Men</h3>
+                                <span class="explore-link">Explore <i data-lucide="arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+                    <a href="shoes.html" class="category-card" id="shoes">
+                        <div class="img-wrapper">
+                            <img src="assets/shoes.png" alt="Shoes">
+                            <div class="cat-overlay">
+                                <h3>Shoes</h3>
+                                <span class="explore-link">Explore <i data-lucide="arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="accessories.html" class="category-card" id="accessories">
+                        <div class="img-wrapper">
+                            <img src="assets/accessories.png" alt="Accessories">
+                            <div class="cat-overlay">
+                                <h3>Accessories</h3>
+                                <span class="explore-link">Explore <i data-lucide="arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="bestsellers.html" class="category-card" id="best-sellers">
+                        <div class="img-wrapper">
+                            <img src="assets/hero.png" alt="Best Sellers">
+                            <div class="cat-overlay">
+                                <h3>Best Sellers</h3>
+                                <span class="explore-link">Explore <i data-lucide="arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            -->
+
+            <!-- Featured Products Section (Disabled) -->
+            <!-- Best Sellers Products Section (Disabled) -->
+            <!--
+            <section class="products-section" id="best-sellers-products">
+                <div class="section-header">
+                    <h2>Best Sellers</h2>
+                    <p>Top rated picks with exclusive discounts</p>
+                </div>
+                <div class="product-grid" id="best-sellers-container">
+                    Loaded via script.js
+                </div>
+            </section>
+            -->
+
+            <!-- Tees Section (Disabled) -->
+            <!--
+            <section class="products-section" id="tees">
+                <div class="section-header">
+                    <h2>Tees & Polos</h2>
+                    <p>Essential picks for your daily rotation</p>
+                </div>
+                <div class="product-grid" id="tees-container">
+                    Loaded via script.js
+                </div>
+            </section>
+            -->
+
+            <!-- Jeans Section (Disabled) -->
+            <!--
+            <section class="products-section" id="jeans">
+                <div class="section-header">
+                    <h2>Denim Collection</h2>
+                    <p>Perfect fits, premium washes</p>
+                </div>
+                <div class="product-grid" id="jeans-container">
+                    Loaded via script.js
+                </div>
+            </section>
+            -->
+
+            <!-- Jackets Section (Disabled) -->
+            <!--
+            <section class="products-section" id="jackets">
+                <div class="section-header">
+                    <h2>Jackets & Outerwear</h2>
+                    <p>Layer up in style</p>
+                </div>
+                <div class="product-grid" id="jackets-container">
+                    Loaded via script.js
+                </div>
+            </section>
+            -->
+
+            <!-- Hoodies Section (Disabled) -->
+            <!--
+            <section class="products-section" id="sweatshirts">
+                <div class="section-header">
+                    <h2>Hoodies & Sweatshirts</h2>
+                    <p>Cozy comfort meets street style</p>
+                </div>
+                <div class="product-grid" id="hoodies-container">
+                    Loaded via script.js
+                </div>
+            </section>
+            -->
+
+            <!-- Shoes Section (Disabled) -->
+            <!--
+            <section class="products-section" id="shoes">
+                <div class="section-header">
+                    <h2>Footwear</h2>
+                    <p>Step out in confidence</p>
+                </div>
+                <div class="product-grid" id="shoes-container">
+                    Loaded via script.js
+                </div>
+            </section>
+            -->
+
+            <!-- Accessories Section (Disabled) -->
+            <!--
+            <section class="products-section" id="accessories">
+                <div class="section-header">
+                    <h2>Accessories</h2>
+                    <p>The finishing touches</p>
+                </div>
+                <div class="product-grid" id="accessories-container">
+                    Loaded via script.js
+                </div>
+            </section>
+            -->
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>GARIBI</h4>
+                <p>Quality fashion designed for the modern lifestyle.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Care Guide</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <i data-lucide="instagram"></i>
+                    <i data-lucide="facebook"></i>
+                    <i data-lucide="twitter"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GARIBI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard | GARIBI</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button id="mobile-menu-btn" class="icon-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <a href="http://localhost:8000/index.html" class="brand-logo">GARIBI</a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <!-- 
+                <li><a href="index.html#men">Men</a></li>
+                <li><a href="index.html#women">Women</a></li>
+                <li><a href="index.html#shoes">Shoes</a></li>
+                <li><a href="index.html#accessories">Accessories</a></li> 
+                -->
+            </ul>
+
+            <div class="nav-right">
+                <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode">
+                    <i data-lucide="moon"></i>
+                </button>
+                <a href="search.html" class="icon-btn"><i data-lucide="search"></i></a>
+                <a href="cart.html" class="icon-btn"><i data-lucide="shopping-bag"></i></a>
+                <a href="dashboard.html" class="icon-btn active"><i data-lucide="user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-layout dashboard-layout">
+        <!-- Dashboard Sidebar -->
+        <aside class="dash-sidebar">
+            <div class="user-profile-summary">
+                <div class="avatar-circle" id="userAvatar">AD</div>
+                <div class="user-info">
+                    <h4 id="userNameDisplay">Anil D.</h4>
+                    <p>Platinum Member</p>
+                </div>
+            </div>
+
+            <nav class="dash-nav" id="dashNav">
+                <a href="#" data-section="overview" class="active"><i data-lucide="layout-dashboard"></i> Overview</a>
+                <a href="#" data-section="orders"><i data-lucide="package"></i> My Orders</a>
+                <a href="#" data-section="wishlist"><i data-lucide="heart"></i> Wishlist</a>
+                <a href="#" data-section="payment"><i data-lucide="credit-card"></i> Payment Methods</a>
+                <a href="#" data-section="settings"><i data-lucide="settings"></i> Account Settings</a>
+                <a href="#" id="logoutBtn" style="color: #ff4d4d; margin-top: 1rem;"><i data-lucide="log-out"></i> Log
+                    Out</a>
+            </nav>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="content-area dash-content" id="dashMain">
+            <!-- OVERVIEW SECTION -->
+            <div id="overview-section" class="dash-section-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="shopping-bag"></i></div>
+                        <div class="stat-info">
+                            <h3>0</h3>
+                            <p>Total Orders</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="clock"></i></div>
+                        <div class="stat-info">
+                            <h3>0</h3>
+                            <p>Pending</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="check-circle"></i></div>
+                        <div class="stat-info">
+                            <h3>0</h3>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="heart"></i></div>
+                        <div class="stat-info">
+                            <h3>0</h3>
+                            <p>Wishlist Items</p>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="dash-section">
+                    <div class="section-title">
+                        <h2>Recent Orders</h2>
+                        <a href="#" onclick="switchTab('orders')">View All</a>
+                    </div>
+                    <div class="orders-list">
+                        <div style="text-align: center; padding: 3rem; color: var(--text-secondary);">
+                            <i data-lucide="package"
+                                style="width: 48px; height: 48px; margin-bottom: 1rem; opacity: 0.3;"></i>
+                            <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">No orders yet</p>
+                            <p style="font-size: 0.9rem;">Start shopping to see your orders here!</p>
+                            <a href="index.html"
+                                style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--text-main); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600;">Browse
+                                Products</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ORDERS SECTION -->
+            <div id="orders-section" class="dash-section-content" style="display:none;">
+                <h2>My Orders</h2>
+                <div class="orders-list" style="margin-top: 2rem;">
+                    <div style="text-align: center; padding: 3rem; color: var(--text-secondary);">
+                        <i data-lucide="package"
+                            style="width: 48px; height: 48px; margin-bottom: 1rem; opacity: 0.3;"></i>
+                        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">No orders yet</p>
+                        <p style="font-size: 0.9rem;">Your order history will appear here once you make a purchase.</p>
+                        <a href="index.html"
+                            style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--text-main); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600;">Start
+                            Shopping</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WISHLIST SECTION -->
+            <div id="wishlist-section" class="dash-section-content" style="display:none;">
+                <h2>My Wishlist</h2>
+                <div class="wishlist-preview-grid" style="margin-top: 2rem;">
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--text-secondary);">
+                        <i data-lucide="heart"
+                            style="width: 48px; height: 48px; margin-bottom: 1rem; opacity: 0.3;"></i>
+                        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Your wishlist is empty</p>
+                        <p style="font-size: 0.9rem;">Save items you love for later!</p>
+                        <a href="index.html"
+                            style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--text-main); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600;">Explore
+                            Products</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAYMENT SECTION -->
+            <div id="payment-section" class="dash-section-content" style="display:none;">
+                <h2>Payment Methods</h2>
+                <div class="stats-grid" style="margin-top: 2rem;">
+                    <div class="stat-card add-new" style="border-style: dashed; cursor: pointer;">
+                        <i data-lucide="plus"></i>
+                        <p>Add Payment Method</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SETTINGS SECTION -->
+            <div id="settings-section" class="dash-section-content" style="display:none;">
+                <h2>Account Settings</h2>
+                <form id="settingsForm" style="max-width: 500px; margin-top: 2rem;">
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label>Full Name</label>
+                        <input type="text" id="settingName"
+                            style="width:100%; padding:0.8rem; border:var(--border-width) var(--border-style) var(--border); border-radius:8px; background:var(--primary-bg); color:var(--text-main);">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label>Email Notification</label>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">
+                            <input type="checkbox" checked>
+                            <span>Receive order updates via email</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="cta-btn"
+                        style="width: 100%; border:none; padding:1rem; border-radius:8px; cursor:pointer;">Update
+                        Profile</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Section Switching Logic
+        const navLinks = document.querySelectorAll('#dashNav a[data-section]');
+        const sections = document.querySelectorAll('.dash-section-content');
+
+        function switchTab(sectionId) {
+            // Update Nav
+            navLinks.forEach(link => {
+                if (link.dataset.section === sectionId) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            // Update Content
+            sections.forEach(sec => {
+                if (sec.id === sectionId + '-section') {
+                    sec.style.display = 'block';
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchTab(link.dataset.section);
+            });
+        });
+
+        // Logout
+        document.getElementById('logoutBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userName');
+            localStorage.removeItem('userRole');
+            localStorage.removeItem('sessionExpiry'); // Clear Expiry
+            window.location.href = 'index.html';
+        });
+
+        // Settings Form
+        const settingsForm = document.getElementById('settingsForm');
+        if (settingsForm) {
+            document.getElementById('settingName').value = localStorage.getItem('userName') || '';
+            settingsForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const newName = document.getElementById('settingName').value;
+                localStorage.setItem('userName', newName);
+                if (typeof showNotification === 'function') {
+                    showNotification('Settings Saved', 'Your profile has been updated successfully.');
+                } else {
+                    alert('Profile Updated!');
+                }
+                setTimeout(() => location.reload(), 1500);
+            });
+        }
+
+        // Show Admin Link if Admin
+        if (localStorage.getItem('userRole') === 'admin') {
+            const nav = document.getElementById('dashNav');
+            const link = document.createElement('a');
+            link.href = 'admin.html';
+            link.style.color = '#1976d2';
+            link.innerHTML = '<i data-lucide="shield"></i> Admin Panel';
+            nav.insertBefore(link, nav.lastElementChild); // Insert before Logout
+            lucide.createIcons();
+        }
+    </script>
+</body>
+
+</html>
